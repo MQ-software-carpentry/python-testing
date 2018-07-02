@@ -1,3 +1,5 @@
+import os.path
+
 import numpy as np
 
 def sinc2d(x, y):
@@ -22,3 +24,19 @@ def c(x):
 def std(vals):
     # surely this is cheating...
     return 1.0
+
+def fib(n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+def f(workdir=None):
+    if workdir is None:
+        workdir = os.getcwd()
+    else:
+        workdir = str(workdir)
+    if not os.path.exists(os.path.join(workdir, "no.txt")):
+        with open(os.path.join(workdir, "yes.txt"), "w") as f:
+            f.write("42")
+

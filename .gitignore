@@ -15,4 +15,4 @@ _site
 .Rproj.user
 .Rhistory
 .RData
-
+.pytest_cache
